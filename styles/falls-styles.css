@@ -1,0 +1,55 @@
+body {
+    background-color: #030c5c;
+    color: #b1b4c0;
+    padding: 1em;
+}
+
+a {
+    background-color: white;
+    color: blue;
+}
+
+a:hover {
+    background-color: yellow;
+    color: black;
+}
+
+.senseButton {
+    padding: 5px 10px;
+    background-color: white;
+    font-size: 18px;
+}
+
+.senseText {
+    padding: 1em 0;
+    font-size: 20px;
+    opacity: 0;
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction:column;
+}
+
+#content {
+    border: 1px solid white;
+    padding: 1em;
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+.fade-in {
+    opacity: 1;
+    animation: 2s ease-in fadeIn;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    } to {
+        opacity: 1;
+    }
+}
