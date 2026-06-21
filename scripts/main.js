@@ -7,14 +7,14 @@ spinWheelButton.addEventListener("click", spinToWin);
 
 // Array of possible locations
 const locArray = [
-    //"abandonedCity",
-    //"midnightFields",
-    //"snowyMountain",
-    //"silentDesert",
-    //"ancientForest",
+    "abandonedCity",
+    "midnightFields",
+    "snowyMountain",
+    "silentDesert",
+    "ancientForest",
     "theFalls",
-    //"shipDock",
-    //"shimmeringLake"
+    "shipDock",
+    "shimmeringLake"
 ]
 
 // Calculate a random result and spin the wheel and then display the result.
