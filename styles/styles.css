@@ -1,0 +1,132 @@
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    padding-left: 15%;
+}
+
+.tutorial-text {
+    font-size: 50px;
+}
+
+body {
+    background-color: rgb(101, 79, 79);
+    color: whitesmoke;
+}
+
+a {
+    color: whitesmoke;
+    font-size: 26px;
+}
+
+#spinWheelButton {
+    margin-left: 10%;
+}
+
+#resultLinks {
+    margin-left: 10%;
+}
+
+.pointer {
+    font-size: 40px;
+}
+
+.spinning-theFalls {
+    animation: 10s forwards spinning-theFalls;
+}
+
+.spinning-abandonedCity {
+    animation: 10s forwards spinning-abandonedCity;
+}
+
+.spinning-midnightFields {
+    animation: 10s forwards spinning-midnightFields;
+}
+
+.spinning-snowyMountain {
+    animation: 10s forwards spinning-snowyMountain;
+}
+
+.spinning-silentDesert {
+    animation: 10s forwards spinning-silentDesert;
+}
+
+.spinning-ancientForest {
+    animation: 10s forwards spinning-ancientForest;
+}
+
+.spinning-shipDock {
+    animation: 10s forwards spinning-shipDock;
+}
+
+.spinning-shimmeringLake {
+    animation: 10s forwards spinning-shimmeringLake;
+}
+
+@keyframes spinning-shimmeringLake {
+    from {
+        rotate: 0deg;
+    } to {
+        rotate: 2145deg;
+    }
+}
+
+@keyframes spinning-shipDock {
+    from {
+        rotate: 0deg;
+    } to {
+        rotate: 1930deg;
+    }
+}
+
+@keyframes spinning-ancientForest {
+    from {
+        rotate: 0deg;
+    } to {
+        rotate: 1870deg;
+    }
+}
+
+@keyframes spinning-silentDesert {
+    from {
+        rotate: 0deg;
+    } to {
+        rotate: 2055deg;
+    }
+}
+
+@keyframes spinning-snowyMountain {
+    from {
+        rotate: 0deg;
+    } to {
+        rotate: 2080deg;
+    }
+}
+
+@keyframes spinning-midnightFields {
+    from {
+        rotate: 0deg;
+    } to {
+        rotate: 1960deg;
+    }
+}
+
+@keyframes spinning-abandonedCity {
+    from {
+        rotate: 0deg;
+    } to {
+        rotate: 1995deg;
+    }
+}
+
+@keyframes spinning-theFalls {
+    from {
+        rotate: 0deg;
+    } to {
+        rotate: 1830deg;
+    }
+}
+
+canvas {
+    border: 1px solid black;
+}
