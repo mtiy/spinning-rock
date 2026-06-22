@@ -2,12 +2,25 @@
 const senseButtons = document.querySelectorAll(".senseButton");
 
 // A list of all our sense text
-const senseTexts = document.querySelectorAll(".senseText");
+const senseText = document.querySelectorAll(".senseText");
 
-// 
+// Index in senseButtons indicating the last button pressed.
+let lastIndex = 0;
+
+// This function
 for(i=0; i < senseButtons.length; i++){
     let index = i;
+
     senseButtons[index].addEventListener("click", () => {
-        senseTexts[index].classList.add("fade-in");
-    })
+
+        if(senseText[lastIndex].classList[1] === "fade-in"){
+            senseText[lastIndex].classList.remove("fade-in");
+            senseText[lastIndex].classList.add("fade-out");
+        } 
+
+        senseText[index].classList.remove("fade-out");
+        senseText[index].classList.add("fade-in");
+
+        lastIndex = index;
+    });
 }

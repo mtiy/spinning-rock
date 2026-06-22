@@ -1,0 +1,39 @@
+.snakeContainer {
+    display: none;
+}
+
+.fade-out {
+    display: none;
+}
+
+.content {
+    background-image: url();
+}
+
+.snake-fade-in{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 25px;
+    gap: 10px;
+}
+
+img:hover {
+    cursor: pointer;
+}
+
+.gameplayText {
+    display: none;
+    font-size: 24px;
+}
+
+.snake {
+    animation: 3s slide-out;
+}
+
+@keyframes slide-out {
+    from {
+        translate: 0 0;
+    } to {
+        translate: 150vw 0;
+    }
+}

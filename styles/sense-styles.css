@@ -1,13 +1,31 @@
+body {
+    background-color: rgb(19, 18, 18);
+    color: rgb(212, 209, 209);
+}
+
+
 .senseButton {
     padding: 5px 10px;
     background-color: white;
     font-size: 18px;
+    cursor: pointer;
 }
 
 .senseText {
-    padding: 1em 0;
-    font-size: 20px;
+    font-size: 24px;
     opacity: 0;
+    padding: 2em 1em;
+    background-color: black;
+    color: white;
+    display: none;
+}
+
+.storyText {
+    font-size: 24px;
+    padding: 2em 1em;
+    background-color: black;
+    color: white;
+    opacity: 0.9;
 }
 
 .wrapper {
@@ -17,23 +35,46 @@
     flex-direction:column;
 }
 
-#content {
-    border: 1px solid white;
-    padding: 1em;
+.buttonContainer {
     display: flex;
-    flex-direction: column;
-    width: 35%;
+    width: 802px;
+    justify-content: space-between;
+    padding: 1em;
+}
+
+.content {
+    border: 1px solid white;
+    display: flex;
+    flex-direction: column-reverse;
+    width: 800px;
+    height: 600px;
 }
 
 .fade-in {
-    opacity: 1;
-    animation: 2s ease-in fadeIn;
+    display: block;
+    animation: 0.7s ease-in forwards fade-in;
 }
 
-@keyframes fadeIn {
+.fade-out{
+    animation: 0.7s ease-out forwards fade-out;
+}
+
+@keyframes fade-in {
     from {
+        display: none;
         opacity: 0;
     } to {
-        opacity: 1;
+        display: block;
+        opacity: 0.90;
+    }
+}
+
+@keyframes fade-out {
+    from {
+        opacity: 0.9;
+        display: block;
+    } to {
+        opacity: 0;
+        display: none;
     }
 }
