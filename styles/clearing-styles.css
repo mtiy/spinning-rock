@@ -3,9 +3,7 @@
 }
 
 .buttonGrid {
-    display: flex;
-    justify-content: space-around;
-    margin-bottom: 200px;
+    display: none;
 }
 
 .puzzleButton {
@@ -28,4 +26,21 @@
 
 .button-on:hover {
     background-color: rgba(0, 128, 0, 0.534);
+}
+
+.fade-in-button-grid {
+    display: flex;
+    justify-content: space-around;
+    margin-bottom: 200px;
+    animation: 1s forwards fade-in-button-grid;
+}
+
+@keyframes fade-in-button-grid {
+    from {
+        opacity: 0;
+        display: none;
+    } to {
+        opacity: 1;
+        display: flex;
+    }
 }
