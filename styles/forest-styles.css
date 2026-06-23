@@ -1,15 +1,3 @@
-body {
-    background-color: #05450c;
-    color: #99db6e;
-    padding: 1em;
-}
-
-a {
-    background-color: white;
-    color: blue;
-}
-
-a:hover {
-    background-color: yellow;
-    color: black;
+.content {
+    background-image: url("../images/forest.png");
 }

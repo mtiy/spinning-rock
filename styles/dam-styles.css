@@ -7,7 +7,7 @@
 }
 
 .content {
-    background-image: url();
+    background-image: url("../images/corridor.png");
 }
 
 .snake-fade-in{
@@ -44,11 +44,6 @@
 
 img:hover {
     cursor: pointer;
-}
-
-.gameplayText {
-    display: none;
-    font-size: 24px;
 }
 
 .snake-move {
