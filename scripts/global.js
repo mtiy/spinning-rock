@@ -7,7 +7,7 @@ const senseText = document.querySelectorAll(".senseText");
 // Index in senseButtons indicating the last button pressed.
 let lastIndex = 0;
 
-// This function sets up the senses buttons
+// This loop sets up the senses buttons
 for(i=0; i < senseButtons.length; i++){
     let index = i;
 
@@ -24,3 +24,4 @@ for(i=0; i < senseButtons.length; i++){
         lastIndex = index;
     });
 }
+

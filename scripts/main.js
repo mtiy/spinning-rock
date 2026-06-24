@@ -12,10 +12,10 @@ let playerObj = {
        // "midnightFields",
         //"snowyMountain",
         //"silentDesert",
-        //"ancientForest",
-        //"theFalls",
+        "ancientForest",
+        "theFalls",
         //"shipDock",
-        //"shimmeringLake"
+        "shimmeringLake"
     ]
 }
 
