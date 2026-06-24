@@ -5,27 +5,29 @@ const wheelContainer = document.getElementById("wheelContainer");
 const spinWheelButton = document.getElementById("spinWheelButton");
 spinWheelButton.addEventListener("click", spinToWin);
 
-// Array of possible locations
-const locArray = [
-    //"abandonedCity",
-    //"midnightFields",
-    //"snowyMountain",
-    //"silentDesert",
-    //"ancientForest",
-    "theFalls",
-    //"shipDock",
-    //"shimmeringLake"
-]
+// Object for storing things I want to use between pages, saved using localStorage
+let playerObj = {
+    locations: [
+        //"abandonedCity",
+       // "midnightFields",
+        //"snowyMountain",
+        //"silentDesert",
+        //"ancientForest",
+        //"theFalls",
+        //"shipDock",
+        //"shimmeringLake"
+    ]
+}
 
 // Calculate a random result and spin the wheel and then display the result.
 function spinToWin(){
-    let randNum = Math.floor(Math.random() * locArray.length);
+    let randNum = Math.floor(Math.random() * playerObj.locations.length);
 
     spinWheelButton.disabled = true;
 
-    wheelContainer.classList.add("spinning-" + locArray[randNum]);
+    wheelContainer.classList.add("spinning-" + playerObj.locations[randNum]);
 
     setTimeout(() => {
-        document.getElementById(locArray[randNum]).hidden = false;
+        document.getElementById(playerObj.locations[randNum]).hidden = false;
     }, 10000);
 }

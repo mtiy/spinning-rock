@@ -5,6 +5,17 @@
     padding-left: 15%;
 }
 
+a {
+    background-color: white;
+    color: blue;
+    font-size: 26px;
+}
+
+a:hover {
+    background-color: yellow;
+    color: black;
+}
+
 .tutorial-text {
     font-size: 50px;
 }
@@ -12,11 +23,6 @@
 body {
     background-color: rgb(101, 79, 79);
     color: whitesmoke;
-}
-
-a {
-    color: whitesmoke;
-    font-size: 26px;
 }
 
 #spinWheelButton {

@@ -24,7 +24,7 @@ continueButton.addEventListener("click", () => {
     gameplayText.classList.add("fade-in");
 });
 
-// Add random translations to each snake
+// Add translations to each snake
 for(i of snakeArray){
     let snakeBoi = i;
     snakeBoi.addEventListener("click", function snakeMove(){
