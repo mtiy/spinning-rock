@@ -1,0 +1,49 @@
+.stoneContainer {
+    display: none;
+}
+
+.angleContainer {
+    display: none;
+}
+
+.stone {
+    cursor: pointer;
+}
+
+.angle {
+    cursor: pointer;
+}
+
+.fade-out {
+    display: none;
+}
+
+.stone-fade-in{
+    display: grid;
+    animation: 1s forwards grid-fade-in;
+}
+
+.angle-fade-in {
+    display: grid;
+    animation: 1s forwards grid-fade-in;
+}
+
+.generic-centered-grid {
+    grid-template-columns: 1fr 1fr;
+    padding: 25px;
+    gap: 10px;    
+    min-height: 0;
+    height: 100%;
+    justify-items: center;
+    align-items: center;
+}
+
+@keyframes grid-fade-in {
+    from {
+        display: none;
+        opacity: 0;
+    } to {
+        display: grid;
+        opacity: 1;
+    }
+}
