@@ -13,10 +13,9 @@ const mainText = "Return to Wheel"
 // Object for storing things I want to use between pages, saved using localStorage
 let playerObj = {
     locations: [
-        //"abandonedCity",
+        "abandonedCity",
         "midnightFields",
         "snowyMountain",
-        //"silentDesert",
         "ancientForest",
         "theFalls",
         "shipDock",

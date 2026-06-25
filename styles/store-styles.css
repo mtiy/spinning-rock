@@ -1,0 +1,41 @@
+.computerScreen {
+    font-size: 3rem;
+    display: none;
+    justify-content: center;
+    align-items: center;
+    height: 600px;
+    letter-spacing: 0;
+}
+
+.buttonContainer {
+    align-items: center;
+    justify-content: center;
+    gap: 5em;
+}
+
+.answer-button {
+    width: 80px;
+}
+
+.answer-button:hover {
+    background-color: rgba(255, 255, 255, 0.459);
+}
+
+.computer-fade-in{
+    display: flex;
+    animation: 1s forwards computer-fade-in;
+}
+
+@keyframes computer-fade-in {
+    from {
+        display: none;
+        opacity: 0;
+    } to {
+        display: flex;
+        opacity: 1;
+    }
+}
+
+#continueButton {
+    margin-right: auto;
+}
