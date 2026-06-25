@@ -1,0 +1,43 @@
+.fire-stick {
+    display: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    padding: 2% 0;
+}
+
+label {
+    width: 75%;
+}
+
+progress {
+    width: inherit;
+}
+
+.flip-horizontal {
+    transform: scale(-1, 1);
+}
+
+.flip-horizontal-reverse {
+    transform: scale(1, 1);
+}
+
+#stick {
+    cursor: pointer;
+}
+
+.fire-fade-in {
+    display: flex;
+    animation: 1s forwards fire-fade-in;
+}
+
+@keyframes fire-fade-in {
+    from {
+        display: none;
+        opacity: 0;
+    } to {
+        display: flex;
+        opacity: 1;
+    }
+}

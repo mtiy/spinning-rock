@@ -16,10 +16,6 @@
     background-color: rgba(255, 0, 0, 0.493);
 }
 
-.fade-out {
-    display: none;
-}
-
 .button-on {
     background-color: green;
 }

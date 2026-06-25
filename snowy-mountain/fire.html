@@ -4,20 +4,40 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fire</title>
+    <link rel="stylesheet" href="../styles/sense-styles.css">
+    <link rel="stylesheet" href="../styles/fire-styles.css">
+    <link rel="stylesheet" href="../styles/global-styles.css">
+    <script src="../scripts/global.js" defer></script>
+    <script src="../scripts/fire.js" defer></script>
 </head>
 <body>
     <div class="wrapper">
         <h1>Fire</h1>
         <div class="content">
             <div class="storyText">
-                
+                You find some dry sticks on the outcropping, seemingly gathered by a previous wanderer. 
+            </div>
+            <div class="fire-stick">
+                <label>
+                    Fire Progress: <progress max="25" value="0"></progress>
+                </label>
+                <div>
+                    <img src="../images/stick.png" alt="A stick on a pink background" id="stick">
+                </div>
+                <div>
+                    <img src="../images/campfire-unlit.png" alt="Two pieces of wood crossing each other" id="campfireUnlit">
+                </div>
+                <div>
+                    <img src="../images/campfire-lit.png" alt="A lit campfire" id="campfireLit" hidden>
+                </div>
+ 
             </div>
         </div>
         <div class="buttonContainer">
             <button class="senseButton" id="continueButton">Continue</button>
         </div>
         <div class="gameplayText">
-
+            Click the stick to spin it
         </div>
     </div>
 </body>

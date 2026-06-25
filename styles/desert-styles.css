@@ -1,16 +1,5 @@
-body {
-    background-color: #b0b95a;
-    color: #112718;
-    padding: 1em;
+.back-anchor {
+    font-size: 24px;
+    position: absolute;
+    margin-left: 700px;
 }
-
-a {
-    background-color: white;
-    color: blue;
-}
-
-a:hover {
-    background-color: yellow;
-    color: black;
-}
-

@@ -1,14 +1,12 @@
-// Grab our continue button (this should probably be a global function, huh?)
-const continueButton = document.getElementById("continueButton");
+// Grab our retry button
 const retryButton = document.getElementById("retryButton");
-
-// Grab our story text (this should also probably be used between pages, huh?)
-const storyText = document.querySelector(".storyText");
-const gameplayText = document.querySelector(".gameplayText");
 
 // Grab our two options containers (stone, angle)
 const stoneContainer = document.querySelector(".stoneContainer");
 const angleContainer = document.querySelector(".angleContainer");
+
+// Create our back anchor
+back("shimmering-lake.html");
 
 // Grab our stones
 const stones = document.querySelectorAll(".stone");
@@ -16,10 +14,8 @@ const angles = document.querySelectorAll(".angle");
 
 // Make our continue button fade out the story text and display our next window
 continueButton.addEventListener("click", () => {
-    continueButton.hidden = true;
-    storyText.classList.add("fade-out");
+    cont();
     stoneContainer.classList.add("stone-fade-in");
-    gameplayText.classList.add("fade-in");
 });
 
 retryButton.addEventListener("click", () => {
@@ -86,11 +82,9 @@ for(i=0; i < angles.length; i++){
         storyText.textContent = resultText;
 
         if(stoneAngleObj.correctState === 2){
-            let a = document.createElement("a");
-            let linkText = document.createTextNode("Return");
-            a.appendChild(linkText);
-            a.href = "../index.html";
+            let a = createAnchor("../index.html", mainText)
             storyText.append(a);
+            removeLocation("shimmeringLake");
         }
 
         storyText.classList.remove("fade-out");

@@ -2,10 +2,6 @@
     display: none;
 }
 
-.fade-out {
-    display: none;
-}
-
 .content {
     background-image: url("../images/corridor.png");
 }

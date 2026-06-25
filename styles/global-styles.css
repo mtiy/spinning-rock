@@ -1,0 +1,12 @@
+.back-anchor {
+    font-size: 24px;
+}
+
+.fade-out {
+    display: none;
+}
+
+.back-anchor-container{
+    width: 800px;
+    margin-top: 1em;
+}

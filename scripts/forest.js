@@ -1,11 +1,8 @@
-// Grab our continue button
-const continueButton = document.getElementById("continueButton");
-
-// Grab our text areas
-const storyText = document.querySelector(".storyText");
-const gameplayText = document.querySelector(".gameplayText");
-
+// Our container for our button puzzle
 const buttonGrid = document.querySelector(".buttonGrid");
+
+// Create our back anchor
+back("ancient-forest.html");
 
 // Assign our puzzle buttons to an array
 const puzzleButtonArr = document.querySelectorAll(".puzzleButton");
@@ -56,10 +53,7 @@ function resetButtons(){
 // Checks if all buttons are pushed down and advances story if they are
 function checkStatus(){
     if(buttonsPressed >= 5){
-        let a = document.createElement("a");
-        let linkText = document.createTextNode("Return");
-        a.appendChild(linkText);
-        a.href = "../index.html";
+        let a = createAnchor("../index.html", mainText)
         storyText.textContent = "The blade whirs to life, spinning impossibly fast! It must be for cutting these trees. Indeed, you see a stack of planks nearby…";
         storyText.append(a);
         gameplayText.classList.remove("fade-in");
@@ -67,13 +61,12 @@ function checkStatus(){
         storyText.classList.remove("fade-out");
         storyText.classList.add("fade-in");
         buttonGrid.classList.remove("fade-in-button-grid")
+        removeLocation("ancientForest");
     }
 }
 
 // Continue button
 continueButton.addEventListener("click", () => {
-    continueButton.hidden = true;
-    storyText.classList.add("fade-out");
-    gameplayText.classList.add("fade-in");
+    cont();
     buttonGrid.classList.add("fade-in-button-grid");
 });

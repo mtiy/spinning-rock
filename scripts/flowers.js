@@ -1,18 +1,17 @@
-// Get continue button
-const continueButton = document.getElementById("continueButton");
-
-// Grab our text areas
-const storyText = document.querySelector(".storyText");
-const gameplayText = document.querySelector(".gameplayText");
-
 // Flower field container
 const flowerGridContainer = document.querySelector(".flower-grid");
 
+// Flowers picked counter
+let flowersPicked = 0;
+
+// Create our back anchor
+back("midnight-fields.html");
+
 // Continue button fades out text and brings up field
 continueButton.addEventListener("click", () => {
-    continueButton.hidden = true;
-    storyText.classList.add("fade-out");
-    gameplayText.classList.add("fade-in");
+    cont();
+    generateFlowerGrid(15, 15, ["#", "g"], ["red", "green", "cyan", "yellow", "purple"]);
+    flowerGridContainer.classList.add("flower-grid-fade-in");
 });
 
 /* 
@@ -24,7 +23,8 @@ flower will contain the flower colors in an array
 function generateFlowerGrid(colLength, rowLength, key, flowers){
 
 
-    let flowerLocations = [4, 10, 14, 27, 50];
+    let flowerLocations = [54, 167, 153, 204, 5];
+    let flowerIndex = 0;
     let counter = 0;
 
     for(i=0; i < colLength; i++){
@@ -33,8 +33,26 @@ function generateFlowerGrid(colLength, rowLength, key, flowers){
             if(flowerLocations.includes(counter)){
                 let span = document.createElement("span");
                 span.append("f");
-                span.style.color = "red";
+                span.style.color = flowers[flowerIndex];
+                span.classList.add("flower");
+
+                span.addEventListener("click", function flowerClick(){
+                    this.textContent = ".";
+                    flowersPicked++;
+                    if(flowersPicked >= flowers.length){
+                        let a = createAnchor("../index.html", mainText)
+                        storyText.textContent = "You hold the flowers in front of you, admiring their beauty. A gust of wind picks them up and they twirl away. ";
+                        storyText.append(a);
+                        flowerGridContainer.classList.remove("flower-grid-fade-in");
+                        storyText.classList.remove("fade-out");
+                        storyText.classList.add("fade-in");
+                        gameplayText.classList.remove("fade-in");
+                        removeLocation("midnightFields");
+                    }
+                });
+
                 div.append(span);
+                flowerIndex++;
             } else {
                 let randNum = Math.floor(Math.random() * key.length);
                 let char = key[randNum];
@@ -44,12 +62,5 @@ function generateFlowerGrid(colLength, rowLength, key, flowers){
         }
         flowerGridContainer.append(div);
     }
-    console.log(counter);
 }
 
-
-
-
-storyText.hidden = true;
-
-generateFlowerGrid(10, 10, ["#", "d", "g", "r"], ["red", "green", "blue", "yellow", "purple"]);

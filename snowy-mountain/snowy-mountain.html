@@ -6,32 +6,24 @@
     <title>Snowy Mountain</title>
     <link rel="stylesheet" href="../styles/mountain-styles.css">
     <link rel="stylesheet" href="../styles/sense-styles.css">
-    <script src="../scripts/global.js" defer></script>
+    <script src="../scripts/senses.js" defer></script>
 </head>
 <body>
     <div class="wrapper">
         <h1>Snowy Mountain</h1>
-        <div id="content">
-            <div id="listen">
-                <button id="listenButton" class="senseButton">Listen</button>
-                <div id="listenText" class="senseText">The wind is whipping through the rocks.</div>
-            </div>
-            <div id="look">
-                <button id="lookButton" class="senseButton">Look</button>
-                <div id="lookText" class="senseText">You are on a small outcrop on the side of a mountain. The wind and snow blow past you, and you can't see past it.</div>
-            </div>
-            <div id="touch">
-                <button id="touchButton" class="senseButton">Touch</button>
-                <div id="touchText" class="senseText">You are freezing. If only you had a <a href="">fire…</a></div>
-            </div>
-            <div id="smell">
-                <button id="smellButton" class="senseButton">Smell</button>
-                <div id="smellText" class="senseText">The air smells crisp. The cold makes your nose go numb.</div>
-            </div>
-            <div id="taste">
-                <button id="tasteButton" class="senseButton">Taste</button>
-                <div id="tasteText" class="senseText">You find some lemon flavored snow. Only, it turns out to not be lemon flavored.</div>
-            </div>
+        <div class="content">
+            <div id="listenText" class="senseText">The wind is whipping through the rocks.</div>
+            <div id="lookText" class="senseText">You are on a small outcrop on the side of a mountain. The wind and snow blow past you, and you can't see past it.</div>
+            <div id="touchText" class="senseText">You are freezing. If only you had a <a href="fire.html">fire…</a></div>
+            <div id="smellText" class="senseText">The air smells crisp. The cold makes your nose go numb.</div>
+            <div id="tasteText" class="senseText">You find some lemon flavored snow. Only, it turns out to not be lemon flavored.</div>
+        </div>
+        <div class="buttonContainer">
+            <button class="senseButton">Listen</button>
+            <button class="senseButton">Look</button>
+            <button class="senseButton">Touch</button>
+            <button class="senseButton">Smell</button>
+            <button class="senseButton">Taste</button>
         </div>
     </div>
 </body>

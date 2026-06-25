@@ -1,15 +1,3 @@
-body {
-    background-color: #ecd1ec;
-    color: #4d1919;
-    padding: 1em;
-}
-
-a {
-    background-color: white;
-    color: blue;
-}
-
-a:hover {
-    background-color: yellow;
-    color: black;
+.content {
+    background-image: url();
 }

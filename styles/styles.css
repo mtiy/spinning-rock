@@ -27,6 +27,13 @@ body {
 
 #spinWheelButton {
     margin-left: 10%;
+    padding: 0.5em 1em;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+#spinWheelButton:hover {
+    background-color: rgba(255, 255, 255, 0.534);
 }
 
 #resultLinks {

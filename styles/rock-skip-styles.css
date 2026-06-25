@@ -14,10 +14,6 @@
     cursor: pointer;
 }
 
-.fade-out {
-    display: none;
-}
-
 .stone-fade-in{
     display: grid;
     animation: 1s forwards grid-fade-in;

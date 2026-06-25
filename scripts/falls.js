@@ -1,10 +1,3 @@
-// Grab our continue button
-const continueButton = document.getElementById("continueButton");
-
-// Grab our text areas
-const storyText = document.querySelector(".storyText");
-const gameplayText = document.querySelector(".gameplayText");
-
 // Grab our snakes
 const snakeContainer = document.querySelector(".snakeContainer");
 const snakeArray = document.querySelectorAll(".snake")
@@ -18,11 +11,12 @@ const bigRedButton = document.getElementById("bigRedButton");
 
 // Add a click event to it to fade out text and fade in new instructions and snakes
 continueButton.addEventListener("click", () => {
-    continueButton.hidden = true;
-    storyText.classList.add("fade-out");
+    cont();
     snakeContainer.classList.add("snake-fade-in");
-    gameplayText.classList.add("fade-in");
 });
+
+// Create our back anchor
+back("the-falls.html");
 
 // Add translations to each snake
 for(i of snakeArray){
@@ -47,11 +41,9 @@ for(i of snakeArray){
 
 bigRedButton.addEventListener("click", () => {
     bigRedButton.hidden = true;
-    let a = document.createElement("a");
-    let linkText = document.createTextNode("Return");
-    a.appendChild(linkText);
-    a.href = "../index.html";
+    let a = createAnchor("../index.html", mainText);
     storyText.textContent = "The lights flicker on as the dam roars to life. The turbines begin to spin again, sending electricity to far off places. ";
     storyText.append(a);
+    removeLocation("theFalls");
 });
 
