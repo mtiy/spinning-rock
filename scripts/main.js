@@ -5,6 +5,14 @@ const wheelContainer = document.getElementById("wheelContainer");
 const spinWheelButton = document.getElementById("spinWheelButton");
 spinWheelButton.addEventListener("click", spinToWin);
 
+// Reset button to clear storage
+const resetButton = document.getElementById("resetButton");
+resetButton.addEventListener("click", () => {
+    localStorage.clear();
+    window.location.reload();
+});
+
+console.log(playerObj);
 // Calculate a random result and spin the wheel and then display the result.
 function spinToWin(){
     let randNum = Math.floor(Math.random() * playerObj.locations.length);
@@ -18,4 +26,4 @@ function spinToWin(){
     }, 10000);
 }
 
-console.log(playerObj.locations);
+

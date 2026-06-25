@@ -25,11 +25,7 @@ let playerObj = {
 }
 
 // Load in our player object
-if(localStorage.length > 0){
-    load();
-} else {
-    save(playerObj);
-}
+load();
 
 // Create a generic function for our continue button
 function cont(){

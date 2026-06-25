@@ -40,7 +40,7 @@ const textObject = {
             if(inventory.locket){
                 textObject.hatch.options.shift();
             } else {
-                textObject.hatch.options.splice(1);
+                textObject.hatch.options.splice(1, 1);
             }
             if(inventory.locket && inventory.coin){
                 textObject.deck.options.shift();
@@ -64,7 +64,7 @@ const textObject = {
         text: "Upon placing the locket and coin in the grooves, the box clicks open. The inside is lined with green velvet, and a small figure pops up in the center and begins to spin. You hear a melody come from the box, haunting and sweet. ",
         item: function end(){
             storyText.append(a);
-            removeLocation("theFalls");
+            removeLocation("shipDock");
         }
     }
 }
