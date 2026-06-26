@@ -2,7 +2,18 @@
     display: flex;
     align-items: center;
     flex-direction: row;
-    padding-left: 15%;
+    justify-content:center;
+    margin-top: 5%;
+}
+
+.endgame-text {
+    font-size:24px;
+    display: none;
+    justify-content: center;
+    margin-top: 10%;
+    text-align: center;
+    flex-direction:column;
+    align-items: center;
 }
 
 a {
@@ -21,8 +32,20 @@ a:hover {
 }
 
 body {
-    background-color: rgb(101, 79, 79);
-    color: whitesmoke;
+    background-color: rgb(19, 18, 18);
+    color: rgb(212, 209, 209);
+}
+
+.gameContainer {
+    display: flex;
+
+}
+
+.restartButton {
+    font-size:24px;
+    padding:10px;
+    max-width: 10ch;
+    margin-top: 1em;
 }
 
 #spinWheelButton {
@@ -30,6 +53,8 @@ body {
     padding: 0.5em 1em;
     font-size: 24px;
     cursor: pointer;
+    margin-top: 5em;
+    margin-bottom: 5em;
 }
 
 #spinWheelButton:hover {
@@ -42,6 +67,7 @@ body {
 
 .pointer {
     font-size: 40px;
+    margin-top: 3.3em;
 }
 
 .spinning-theFalls {
@@ -74,6 +100,19 @@ body {
 
 .spinning-shimmeringLake {
     animation: 10s forwards spinning-shimmeringLake;
+}
+
+.spinning-win {
+    animation: 10s forwards spinning-win;
+}
+
+.full-fade-out {
+    animation: 15s forwards full-fade-out;
+}
+
+.endgame-text-fade {
+    display: flex;
+    animation: 3s forwards endgame-text-fade;
 }
 
 @keyframes spinning-shimmeringLake {
@@ -140,6 +179,28 @@ body {
     }
 }
 
-canvas {
-    border: 1px solid black;
+@keyframes spinning-win {
+    from {
+        rotate: 0deg;
+    } to {
+        rotate: 2045deg;
+    }
+}
+
+@keyframes full-fade-out {
+    from {
+        opacity: 1;
+    } to {
+        opacity: 0;
+    }
+}
+
+@keyframes endgame-text-fade {
+    from {
+        display: none;
+        opacity: 0;
+    } to {
+        display: block;
+        opacity: 1;
+    }
 }

@@ -97,6 +97,7 @@ function advanceState(){
         computerScreen.classList.remove("computer-fade-in");
         let a = createAnchor("../index.html", mainText);
         storyText.append(a);
+        removeLocation("abandonedCity");
         return;
     }
 
