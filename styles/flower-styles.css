@@ -15,6 +15,11 @@
 .flower-grid-fade-in {
     display: flex;
     animation: 1s forwards flower-fade-in;
+    background-color:black;
+}
+
+.content {
+    background-image: url("../images/flowers.png");
 }
 
 @keyframes flower-fade-in {

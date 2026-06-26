@@ -38,7 +38,7 @@ body {
 
 .gameContainer {
     display: flex;
-
+    width: 800px;
 }
 
 .restartButton {
@@ -63,6 +63,9 @@ body {
 
 #resultLinks {
     margin-left: 10%;
+    justify-content:center;
+    display:flex;
+    flex-direction: column;
 }
 
 .pointer {

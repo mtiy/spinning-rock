@@ -1,3 +1,7 @@
 #deck {
     background-color: gold;
 }
+
+.content {
+    background-image: url("../images/ship.png");
+}

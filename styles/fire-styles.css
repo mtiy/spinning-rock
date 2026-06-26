@@ -7,8 +7,13 @@
     padding: 2% 0;
 }
 
+.content {
+    background-image: url("../images/fire.png");
+}
+
 label {
     width: 75%;
+    color: black;
 }
 
 progress {

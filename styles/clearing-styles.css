@@ -1,5 +1,5 @@
 .content {
-    background-image: url();
+    background-image: url("../images/clearing.png");
 }
 
 .buttonGrid {
@@ -29,6 +29,8 @@
     justify-content: space-around;
     margin-bottom: 200px;
     animation: 1s forwards fade-in-button-grid;
+    background-color: rgba(0, 0, 0, 0.856);
+    padding: 80px 0;
 }
 
 @keyframes fade-in-button-grid {

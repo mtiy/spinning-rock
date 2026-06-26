@@ -1,15 +1,3 @@
-body {
-    background-color: #442c19;
-    color: #e1e410;
-    padding: 1em;
-}
-
-a {
-    background-color: white;
-    color: blue;
-}
-
-a:hover {
-    background-color: yellow;
-    color: black;
+.content {
+    background-image: url("../images/midnight-fields.png");
 }

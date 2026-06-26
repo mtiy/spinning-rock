@@ -2,6 +2,10 @@
     display: none;
 }
 
+.content {
+    background-image: url("../images/skipping-rocks.png");
+}
+
 .angleContainer {
     display: none;
 }
