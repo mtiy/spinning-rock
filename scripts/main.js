@@ -5,9 +5,7 @@ const endgameTextContainer = document.querySelector(".endgame-text");
 
 // Button that will spin the wheel when pressed
 const spinWheelButton = document.getElementById("spinWheelButton");
-let buttonClick = new Audio("../sounds/click.mp3");
 spinWheelButton.addEventListener("click", () => {
-    buttonClick.play();
     spinToWin();
 });
 
