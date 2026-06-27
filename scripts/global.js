@@ -59,11 +59,11 @@ function createAnchor(filePath, text){
 // Creating save and load functions using localStorage
 function save(obj){
     localStorage.clear();
-    localStorage.setItem("save", JSON.stringify(obj));
+    localStorage.setItem("spin-save", JSON.stringify(obj));
 }
 
 function load(){
-    let state = JSON.parse(localStorage.getItem("save"));
+    let state = JSON.parse(localStorage.getItem("spin-save"));
     playerObj.locations = state.locations;
 }
 

@@ -7,14 +7,6 @@ const endgameTextContainer = document.querySelector(".endgame-text");
 const spinWheelButton = document.getElementById("spinWheelButton");
 spinWheelButton.addEventListener("click", spinToWin);
 
-// Reset button to clear storage
-const resetButton = document.getElementById("resetButton");
-resetButton.addEventListener("click", () => {
-    localStorage.clear();
-    window.location.reload();
-});
-
-console.log(playerObj);
 // Calculate a random result and spin the wheel and then display the result.
 function spinToWin(){
     if(playerObj.locations.length === 0){
