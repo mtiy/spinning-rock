@@ -53,6 +53,7 @@ const textObject = {
         item: function checkInv(){
             if(inventory.locket && inventory.coin){
                 textObject.box.options.push({name: "end", text: "Place Locket and Coin"});
+                inventory.locket = false;
             }
         }
     },
@@ -92,6 +93,10 @@ function createButtons(buttonName, buttonText){
         textObject[this.id].item ? textObject[this.id].item() : console.log("No method attached");
         
         showOptions(textObject[this.id].options);
+   });
+
+   btn.addEventListener("click", () => {
+        buttonClick.play();
    });
 
     buttonContainer.append(btn);

@@ -9,6 +9,14 @@ const puzzleButtonArr = document.querySelectorAll(".puzzleButton");
 
 let buttonsPressed = 0;
 
+// Change our red button sounds
+for(i of puzzleButtonArr){
+    i.removeEventListener("click", buttonSound);
+    i.addEventListener("click", () => {
+        redButtonClick.play();
+    });
+}
+
 // Add click event to each button, doing this hard coded for now (1, 5, 4, 2, 3)
 puzzleButtonArr[0].addEventListener("click", () => {
     puzzleButtonArr[0].classList.add("button-on");
@@ -54,7 +62,7 @@ function resetButtons(){
 function checkStatus(){
     if(buttonsPressed >= 5){
         let a = createAnchor("../index.html", mainText)
-        storyText.textContent = "The blade whirs to life, spinning impossibly fast! It must be for cutting these trees. Indeed, you see a stack of planks nearby…";
+        storyText.textContent = "The blade whirs to life, spinning impossibly fast! ";
         storyText.append(a);
         gameplayText.classList.remove("fade-in");
         gameplayText.classList.add("fade-out");

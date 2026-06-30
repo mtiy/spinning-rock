@@ -61,6 +61,9 @@ function createAnswerButtons(answers, correctAnswer){
         let btn = document.createElement("button");
         btn.textContent = answers[i];
         btn.classList.add("senseButton", "answer-button");
+        btn.addEventListener("click", () => {
+            buttonClick.play();
+        });
 
         if(isCorrect){
             btn.addEventListener("click", () => {

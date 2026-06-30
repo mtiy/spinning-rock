@@ -7,21 +7,24 @@ const wrapperDiv = document.querySelector(".wrapper");
 const storyText = document.querySelector(".storyText");
 const gameplayText = document.querySelector(".gameplayText");
 
+// Audio Effect attempt #2
+
+let redButtonClick = new Audio("../sounds/click2.mp3");
+let buttonClick = new Audio("../sounds/click.mp3");
+buttonClick.volume = 0.5;
+redButtonClick.volume = 0.5;
+const allButtons = document.querySelectorAll("button");
+
+for(i of allButtons){
+    i.addEventListener("click", buttonSound);
+}
+
+function buttonSound(){
+    buttonClick.play();
+}
+
 // Our return text
 const mainText = "Return to Wheel"
-
-// Grab our buttons and add sound effect
-let buttonClickUp = new Audio("../sounds/click.mp3");
-// let buttonClickDown = new Audio("../sounds/click2.mp3");
-
-const allButtons = document.querySelectorAll("button");
-console.log(allButtons);
-console.log(document.querySelectorAll("button"));
-for(btn of allButtons){
-    btn.addEventListener("click", () => {
-        buttonClickUp.play();
-    });
-}
 
 // Object for storing things I want to use between pages, saved using localStorage
 let playerObj = {

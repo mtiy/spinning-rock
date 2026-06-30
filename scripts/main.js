@@ -1,13 +1,17 @@
 // Div containing our wheel image that we will rotate with CSS
 const wheelContainer = document.getElementById("wheelContainer");
 
-const endgameTextContainer = document.querySelector(".endgame-text");
+const endgameTextContainer = document.querySelector(".endgame-container");
+const endgameText = document.querySelector(".endgame-text");
 
 // Button that will spin the wheel when pressed
 const spinWheelButton = document.getElementById("spinWheelButton");
 spinWheelButton.addEventListener("click", () => {
     spinToWin();
 });
+
+redButtonClick = new Audio("/sounds/click2.mp3");
+buttonClick = new Audio("/sounds/click.mp3");
 
 // Calculate a random result and spin the wheel and then display the result.
 function spinToWin(){
@@ -50,7 +54,7 @@ function endGame(){
         window.location.reload();
     });
 
-    endgameTextContainer.append(restartButton);
+    endgameText.append(restartButton);
 
     endgameTextContainer.classList.add("endgame-text-fade");
 }

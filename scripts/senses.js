@@ -4,6 +4,9 @@ const senseButtons = document.querySelectorAll(".senseButton");
 // A list of all our sense text
 const senseText = document.querySelectorAll(".senseText");
 
+// Link back to main menu container
+const returnContainer = document.querySelector(".link-container")
+
 // Index in senseButtons indicating the last button pressed.
 let lastIndex = 0;
 
@@ -25,3 +28,12 @@ for(i=0; i < senseButtons.length; i++){
     });
 }
 
+// Return to wheel from senses screen if you're done
+function checkFinish(locationString){
+    if(!playerObj.locations.includes(locationString)){
+        let a = createAnchor("../index.html", mainText);
+        returnContainer.append(a);
+    }
+}
+// Append a link to the main menu if completed already
+checkFinish(returnContainer.id);
